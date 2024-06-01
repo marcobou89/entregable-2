@@ -1,9 +1,13 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
+import axios, { Axios, AxiosError, AxiosHeaders } from 'axios';
 
-const Weather = ({obj,temp}) => {
+const Weather = ({obj,temp,dataApi}) => {
 
         const [conver, setComver] = useState(true);
         const [icon, setIcon] = useState("°C")
+        
+
+    
       
       const handleConver = () => {
                 if (conver) {
@@ -13,7 +17,8 @@ const Weather = ({obj,temp}) => {
                 }
                 setComver(!conver)
           }
-          
+      
+
     return (
     <div className='content_1'>
         <h1>Weather App</h1>
@@ -22,9 +27,7 @@ const Weather = ({obj,temp}) => {
         
 
         <div className='content_2'>
-                
-        
-        
+
         <div >
                 <img src={`https://openweathermap.org/img/wn/${obj?.weather[0].icon}@2x.png`} alt="" />
         </div>
@@ -48,7 +51,7 @@ const Weather = ({obj,temp}) => {
         <div>{temp?.fah}°</div>
         }
         <div>
-        <button onClick={handleConver}>Change to{icon} </button>
+        <button onClick={handleConver} > hoka como estas</button>
         </div>
     </div>
   )
