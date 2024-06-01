@@ -1,29 +1,49 @@
-# React + Vite
+# Nombre del Proyecto
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Descripción breve del proyecto.
 
-Currently, two official plugins are available:
+## Tabla de contenidos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Nombre del Proyecto](#nombre-del-proyecto)
+  - [Tabla de contenidos](#tabla-de-contenidos)
+  - [Descripción del proyecto](#descripción-del-proyecto)
+  - [Instalación](#instalación)
+  - [Uso](#uso)
+  - [Funcionalidades](#funcionalidades)
+      - [Geolocalización](#geolocalización)
+      - [Solicitud de datos](#solicitud-de-datos)
+  - [Contribuyendo Marco Cruz](#contribuyendo-marco-cruz)
 
+## Descripción del proyecto
 
-- Crea una aplicación con **viteJs** o create-react-app -[x]
-- Instalar la(s) librería(s) necesarias para hacer peticiones asíncronas -[x]  
-- El endpoint de la API anteriormente nombrada, necesita una latitud y una longitud y una api KEY
-    - Respecto de la latitud y longitud todo se ve en la sección anterior
-    - Respecto de la Api Key, también leer la sección anterior
-- Una vez que hacemos la petición asíncrona tanto de la latitud y longitud, como de la información del clima, desplegamos la información en nuestra aplicación (Abrir para ver imagen)
-    
-    ### La información que se debe desplegar es:
-    
-    - Ciudad y país
-    - Condición del clima
-    - Velocidad del viento
-    - Porcentaje de nubes
-    - Presión atmosférica
-    - Temperatura actual
-    
-    ![img](https://prod-files-secure.s3.us-west-2.amazonaws.com/0640d539-599c-477d-b514-cd74b15ced93/7ca5f39c-c260-47be-a819-a49cd8e28f93/Untitled.png)
-    
-- Una de las opciones mas importantes que desplegar es la temperatura, por lo tanto debemos crear un botón que cambie la temperatura de grados Celsius a grados Farenheit y viceversa. (Ver imagen del punto anterior)
+Proporciona una descripción más detallada del proyecto, incluyendo su propósito, las tecnologías utilizadas y cualquier otra información relevante.
+
+## Instalación
+
+1. Clona el repositorio: `https://github.com/marcobou89/entregable-2`
+2. Navega al directorio del proyecto: `https://entregable-2-mcruz.netlify.app`
+3. Instala las dependencias: `npm install`
+
+## Uso
+
+Proporciona instrucciones sobre cómo usar el proyecto, incluyendo cómo iniciar el servidor de desarrollo, abrir el navegador en la URL correcta, etc.
+
+## Funcionalidades
+
+Lista las funcionalidades principales del proyecto y cómo se utilizan. Por ejemplo:
+
+- Geolocalización: El proyecto utiliza la API de geolocalización para obtener la ubicación del usuario.
+- Solicitud de datos: El proyecto realiza solicitudes a una API externa para obtener datos adicionales.
+
+#### Geolocalización
+
+- Se utiliza la API de geolocalización para obtener la ubicación del usuario.
+- Se utiliza la función `navigator.geolocation.getCurrentPosition()` para obtener la ubicación actual.
+- Se almacena la latitud y longitud en el estado del componente principal.
+
+#### Solicitud de datos
+
+- Se realiza una solicitud a la API externa utilizando la biblioteca Axios.
+- Se utiliza el estado del componente principal para pasar los valores de latitud y longitud a la URL de la solicitud.
+
+## Contribuyendo Marco Cruz

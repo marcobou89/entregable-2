@@ -4,7 +4,7 @@ import axios, { Axios, AxiosError, AxiosHeaders } from 'axios';
 const Weather = ({obj,temp,dataApi}) => {
 
         const [conver, setComver] = useState(true);
-        const [icon, setIcon] = useState("°C")
+        const [icon, setIcon] = useState("°F")
         
 
     
@@ -26,12 +26,13 @@ const Weather = ({obj,temp,dataApi}) => {
         <h3>{obj?.weather[0].description}</h3>
         
 
-        <div className='content_2'>
-
         <div >
-                <img src={`https://openweathermap.org/img/wn/${obj?.weather[0].icon}@2x.png`} alt="" />
-        </div>
-
+        <img src={`https://openweathermap.org/img/wn/${obj?.weather[0].icon}@2x.png`} alt="" />
+        
+        
+        <div className='content_2' >
+               
+        
         <div>
                 <h4>Wind Speed</h4>
                 <h4>Clouds</h4>
@@ -44,14 +45,14 @@ const Weather = ({obj,temp,dataApi}) => {
                 <h5>{obj?.main.pressure}hPa</h5>
         </div>
         </div>
-
+        </div>
         {
-        conver? <div>{temp?.kel}°</div>
+        conver? <h2>{temp?.kel}°</h2>
         :
-        <div>{temp?.fah}°</div>
+            <h2>{temp?.fah}°</h2>     
         }
         <div>
-        <button onClick={handleConver} > hoka como estas</button>
+        <button onClick={handleConver} > Change to {icon}</button>
         </div>
     </div>
   )

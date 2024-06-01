@@ -10,7 +10,6 @@ function App() {
   const [contry, setContry] = useState()
   const [errLocation, setErrLocation] = useState()
   const [dataApi, setDataApi] = useState()
-  const [dataApi2, setDataApi2] = useState()
   const [obweather, setObWeather] = useState()
   const [loading, setLoading] = useState(true)
   const [temp, setTemp] = useState()
@@ -66,38 +65,11 @@ useEffect(() => {
         setTimeout(() => {
           setLoading(false)
         }, 2000)
-      });
-    
-    } else if (dataApi2) {
-
-      const {lat, lon} = dataApi2;
-      console.log(dataApi2);
-    const url =`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}`
-    
-  
-
-      axios.get(url)
-      .then((res)=> {
-        setObWeather(res.data);
-        const kel=res.data.main.temp;
-        const cel=(kel-273.15).toFixed(2);
-        const fah=(cel*9/5+32).toFixed(2);
-        setTemp({kel:kel,fah:fah});
-
-        
-        
-      
-  })
-      .catch(err=> console.log(err))
-      .finally(() => {
-        setTimeout(() => {
-          setLoading(false)
-        }, 2000)
-      });
-      
+      }); 
     } 
         
-}, [dataApi,dataApi2])
+}, [dataApi])
+
 
 const textInput = useRef()
 
@@ -118,14 +90,14 @@ console.log(contry);
     axios.get(url2)
       .then((res)=> {
 console.log(res.data);
-        setDataApi2(res.data.coord)
+        setDataApi(res.data.coord)
    
   })
       .catch(err=> console.log(err))
 }
   }, [contry])
   
-  console.log(dataApi2);
+ 
 
 
 
@@ -133,6 +105,8 @@ console.log(res.data);
   return (
 
     <div className="app">
+          
+          <div className='content_app' >
           {
             errLocation? <h1>The application cannot work, allow geolocation access to access the application</h1> 
             :
@@ -149,13 +123,15 @@ console.log(res.data);
             temp={temp}
           />
           <form onSubmit={handleText}>
-            <input ref={textInput} type="text" />
-            <button>serch</button>
+            <input ref={textInput} type="text" placeholder='Ingresa una ciudad...' />
+            <button>Search</button>
           </form>
           </>
           } 
         </>
           }
+
+      </div>
     </div>
   )
 }

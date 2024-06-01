@@ -7,51 +7,69 @@
 }
 
 h1{
-  margin: 40px;
+  margin: 20px 40px;
 }
-.app{
+.app{ 
   display: flex;
+  justify-content: center;
   height: 100vh;
-  justify-content:center;
-  align-items: center;
   background-image: url("https://img.freepik.com/fotos-premium/gif-animado-automovil-conduciendo-traves-paisaje-montanoso-caja-equipaje-encima-amarillo-azul-verde-ai-generativo_865659-9178.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  border: 5px solid black;
 
 }
-
-.content_1{
-  display: flex;
-  padding: 50px 30px;
-  margin: 40px 40px;
-  gap: 10px 20px;
+.content_app{
+  padding: 20px 0;
   text-align: center;
-  justify-content: center;
-  align-content: center;
-  flex-direction: column;
+  display: flex;
   border: 3px solid black;
   background-color: rgba(9, 161, 136, 0.438);
   border-radius: 24px;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  border-radius: 24px;
 }
 
-.content_1:hover{
+
+
+.content_app:hover{
   background-color: rgba(255, 255, 255, 0.205);
   border: 2px solid white;
   box-shadow: 2px 2px 10px 10px rgba(0, 0, 0, 0.432);
 }
 
 .content_2{
+  text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 30px;
+  gap: 40px;
+  font-size: 16px;
+  margin-bottom: 10px;
 }
 
 button{
+  margin: 10px 10px;
   padding: 10px;
   border-radius: 10px;
   cursor: pointer;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+input{
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  
+}
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
 
